@@ -49,6 +49,10 @@ then
 
    docker run --cap-add=sys_admin --cap-add mknod --security-opt label=disable --device /dev/fuse --security-opt seccomp=unconfined mgoltzsche/podman podman run alpine  echo hello from nested container
    
+   # Tried by not using Docker due to its permission issues. Still got an error:
+   # Error: failed to set the loopback adapter up: operation not permitted
+   podman run --cap-add=sys_admin --cap-add mknod --security-opt label=disable --device /dev/fuse --security-opt seccomp=unconfined mgoltzsche/podman podman run alpine  echo hello from nested container
+   
 else
    echo Wrong input. Please re-run and type rootless or rootfull as input.
    exit 1
