@@ -1,4 +1,5 @@
 The 2 Pod YAML definitions work and allow the use of Podman in Podman without the use of the privileged flag.
+Always install the device-plugin first before running the Pods.
 
 The use of the Rootfull implementation though, still needs significant privileges to run without error.
 
